@@ -8,6 +8,7 @@ This project demonstrates professional software development practices using:
 - **BDD-Spec-Partner Methodology** (Safety-First, Collaborative Workflow, Explicit Approval)
 - **Test-Driven Development** with comprehensive scenario coverage
 - **Modern Python Stack** with FastAPI and Pydantic
+- **React + TypeScript Frontend** with Vite build system
 - **Clean Architecture** with separation of concerns
 
 ## 📁 Project Structure
@@ -28,7 +29,18 @@ AllHandsTechnical/
 │   ├── run_tests.py               # BDD test runner script
 │   ├── API_DOCUMENTATION.md      # Complete API documentation
 │   ├── BDD_IMPLEMENTATION_SUMMARY.md # Detailed BDD docs
-│   └── README.md                  # Backend documentation
+├── frontend/                        # Frontend implementation
+│   ├── src/                        # React TypeScript source
+│   │   ├── components/             # React components (ready)
+│   │   ├── hooks/                  # Custom hooks (ready)
+│   │   ├── types/                  # TypeScript definitions (ready)
+│   │   ├── services/               # API services (ready)
+│   │   ├── App.tsx                 # Main App component
+│   │   └── main.tsx                # Entry point
+│   ├── public/                     # Static assets
+│   ├── package.json                # Node.js dependencies
+│   ├── vite.config.ts              # Vite configuration
+│   └── README.md                   # Frontend documentation
 ├── BDD_spec.md                    # BDD specification document
 └── README.md                      # This file
 ```
@@ -58,8 +70,10 @@ AllHandsTechnical/
 ### Prerequisites
 - Python 3.8+
 - pip package manager
+- Node.js 18+
+- npm or yarn
 
-### Setup & Run Tests
+### Backend Setup
 ```bash
 # Clone the repository
 git clone https://github.com/darcee/AllHandsTechnical.git
@@ -81,6 +95,34 @@ python3 test_api.py
 
 # View API documentation
 # http://localhost:8000/docs
+```
+
+### Frontend Setup
+```bash
+# In a new terminal, navigate to frontend
+cd AllHandsTechnical/frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Frontend will be available at:
+# http://localhost:54281
+```
+
+### Full Stack Development
+```bash
+# Terminal 1: Start backend API
+cd backend && python3 start_api.py
+
+# Terminal 2: Start frontend dev server  
+cd frontend && npm run dev
+
+# Backend API: http://localhost:8000
+# Frontend App: http://localhost:54281
+# API Docs: http://localhost:8000/docs
 ```
 
 ## 🎮 Game Features
