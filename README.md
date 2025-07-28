@@ -20,9 +20,14 @@ AllHandsTechnical/
 │   │   └── steps/                  # Step definitions
 │   │       └── tic_tac_toe_steps.py # BDD step definitions
 │   ├── game.py                    # Core game engine
+│   ├── main.py                    # FastAPI REST API
+│   ├── start_api.py               # API server startup script
+│   ├── test_api.py                # API integration tests
+│   ├── demo.html                  # Interactive API demo
 │   ├── requirements.txt            # Python dependencies
-│   ├── run_tests.py               # Test runner script
-│   ├── BDD_IMPLEMENTATION_SUMMARY.md # Detailed docs
+│   ├── run_tests.py               # BDD test runner script
+│   ├── API_DOCUMENTATION.md      # Complete API documentation
+│   ├── BDD_IMPLEMENTATION_SUMMARY.md # Detailed BDD docs
 │   └── README.md                  # Backend documentation
 ├── BDD_spec.md                    # BDD specification document
 └── README.md                      # This file
@@ -34,6 +39,9 @@ AllHandsTechnical/
 - **14 BDD Scenarios** - Complete game functionality coverage
 - **74 Step Definitions** - Comprehensive test implementation
 - **Game Engine** - Full tic-tac-toe logic with validation
+- **FastAPI REST API** - Complete web API with 9 endpoints
+- **API Integration Tests** - Comprehensive API test suite
+- **Interactive Demo** - HTML demo page for API testing
 - **Custom Player Names** - Personalized gameplay experience
 - **Win/Draw Detection** - All victory conditions implemented
 - **Move Validation** - Complete error handling and edge cases
@@ -64,6 +72,15 @@ pip install -r requirements.txt
 python3 run_tests.py
 # or
 behave
+
+# Start the API server
+python3 start_api.py
+
+# Run API tests (in another terminal)
+python3 test_api.py
+
+# View API documentation
+# http://localhost:8000/docs
 ```
 
 ## 🎮 Game Features
