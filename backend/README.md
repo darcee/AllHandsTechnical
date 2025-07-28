@@ -76,9 +76,14 @@ backend/
 │   └── steps/
 │       └── tic_tac_toe_steps.py     # Step definitions
 ├── game.py                          # Core game engine
+├── main.py                          # FastAPI application
+├── start_api.py                     # API server startup script
+├── test_api.py                      # API integration tests
+├── demo.html                        # Interactive API demo
 ├── requirements.txt                  # Dependencies
-├── run_tests.py                     # Test runner script
-├── BDD_IMPLEMENTATION_SUMMARY.md   # Detailed documentation
+├── run_tests.py                     # BDD test runner script
+├── API_DOCUMENTATION.md            # Complete API documentation
+├── BDD_IMPLEMENTATION_SUMMARY.md   # Detailed BDD documentation
 └── README.md                       # This file
 ```
 
@@ -113,12 +118,51 @@ print(f"Winner: {game.get_winner_name()}")
 print(f"Game over: {game.is_game_over()}")
 ```
 
+## 🚀 FastAPI REST API
+
+The `main.py` module provides a complete REST API built with FastAPI that integrates seamlessly with the game engine:
+
+### Key Features
+- **RESTful Design** - Standard HTTP methods and status codes
+- **Auto Documentation** - Interactive Swagger UI and ReDoc
+- **Input Validation** - Automatic request/response validation with Pydantic
+- **CORS Support** - Ready for frontend integration
+- **Error Handling** - Comprehensive error responses
+- **Type Safety** - Full type hints throughout
+
+### Quick Start
+```bash
+# Start the API server
+python3 start_api.py
+
+# View interactive documentation
+# http://localhost:8000/docs
+
+# Run API tests
+python3 test_api.py
+
+# Try the demo
+# Open demo.html in your browser
+```
+
+### API Endpoints
+- `POST /games` - Create new game
+- `GET /games/{id}` - Get game state  
+- `POST /games/{id}/moves` - Make a move
+- `POST /games/{id}/reset` - Reset game
+- `DELETE /games/{id}` - Delete game
+- `GET /games/{id}/board` - Get board state
+- `GET /games/{id}/status` - Get game status
+
+See [API_DOCUMENTATION.md](API_DOCUMENTATION.md) for complete endpoint details.
+
 ## 🔧 Dependencies
 
 - `behave==1.2.6` - BDD testing framework
-- `fastapi==0.115.13` - Web framework (ready for API)
-- `uvicorn==0.34.3` - ASGI server
-- `pydantic==2.11.5` - Data validation
+- `fastapi==0.115.13` - Modern web framework for APIs
+- `uvicorn==0.34.3` - ASGI server for FastAPI
+- `pydantic==2.11.5` - Data validation and serialization
+- `requests==2.31.0` - HTTP client for API testing
 
 ## 🎯 Game Logic
 
