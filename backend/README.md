@@ -74,11 +74,43 @@ backend/
 ├── features/
 │   ├── tic-tac-toe.feature          # BDD scenarios in Gherkin
 │   └── steps/
-│       └── tic_tac_toe_steps.py     # Step definitions & game logic
+│       └── tic_tac_toe_steps.py     # Step definitions
+├── game.py                          # Core game engine
 ├── requirements.txt                  # Dependencies
 ├── run_tests.py                     # Test runner script
 ├── BDD_IMPLEMENTATION_SUMMARY.md   # Detailed documentation
 └── README.md                       # This file
+```
+
+## 🎮 Game Engine
+
+The `game.py` module contains the core tic-tac-toe game logic, completely separated from the BDD test framework:
+
+### Key Features
+- **Clean Architecture** - Pure Python game logic without external dependencies
+- **Complete API** - All methods needed for full game functionality
+- **Type Hints** - Modern Python with comprehensive type annotations
+- **Comprehensive Validation** - All edge cases and error conditions handled
+- **Reusable Design** - Can be imported and used in any Python application
+
+### Core Classes
+- `TicTacToeGame` - Main game engine with complete tic-tac-toe functionality
+
+### Usage Example
+```python
+from game import TicTacToeGame
+
+# Create a new game
+game = TicTacToeGame("Alice", "Bob")
+
+# Make moves
+game.make_move(0, 0)  # Alice (X) plays center
+game.make_move(1, 1)  # Bob (O) plays center
+
+# Check game state
+print(f"Current player: {game.get_current_player_name()}")
+print(f"Winner: {game.get_winner_name()}")
+print(f"Game over: {game.is_game_over()}")
 ```
 
 ## 🔧 Dependencies

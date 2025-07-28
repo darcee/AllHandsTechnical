@@ -18,7 +18,8 @@ AllHandsTechnical/
 │   ├── features/                    # BDD test scenarios
 │   │   ├── tic-tac-toe.feature     # Gherkin scenarios
 │   │   └── steps/                  # Step definitions
-│   │       └── tic_tac_toe_steps.py # Game logic & tests
+│   │       └── tic_tac_toe_steps.py # BDD step definitions
+│   ├── game.py                    # Core game engine
 │   ├── requirements.txt            # Python dependencies
 │   ├── run_tests.py               # Test runner script
 │   ├── BDD_IMPLEMENTATION_SUMMARY.md # Detailed docs
