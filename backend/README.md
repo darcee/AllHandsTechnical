@@ -78,7 +78,7 @@ backend/
 ├── requirements.txt                  # Dependencies
 ├── run_tests.py                     # Test runner script
 ├── BDD_IMPLEMENTATION_SUMMARY.md   # Detailed documentation
-└── ReadMe.md                       # This file
+└── README.md                       # This file
 ```
 
 ## 🔧 Dependencies

@@ -22,7 +22,7 @@ AllHandsTechnical/
 │   ├── requirements.txt            # Python dependencies
 │   ├── run_tests.py               # Test runner script
 │   ├── BDD_IMPLEMENTATION_SUMMARY.md # Detailed docs
-│   └── ReadMe.md                  # Backend documentation
+│   └── README.md                  # Backend documentation
 ├── BDD_spec.md                    # BDD specification document
 └── README.md                      # This file
 ```
