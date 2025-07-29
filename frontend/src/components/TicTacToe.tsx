@@ -127,7 +127,7 @@ export const TicTacToe: React.FC = () => {
           />
 
           <GameControls
-            onNewGame={() => setShowNameForm(true)}
+            onNewGame={handleNewGame}
             onResetGame={handleResetGame}
             gameId={game.game_id}
             isGameOver={game.is_game_over}
