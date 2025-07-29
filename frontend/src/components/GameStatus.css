@@ -1,0 +1,96 @@
+/**
+ * Styles for game status display
+ */
+
+.game-status {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.game-status.playing {
+  background-color: #e8f4fd;
+  border: 2px solid #3498db;
+}
+
+.game-status.winner {
+  background-color: #d5f4e6;
+  border: 2px solid #27ae60;
+}
+
+.game-status.draw {
+  background-color: #fef9e7;
+  border: 2px solid #f39c12;
+}
+
+.status-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.game-status.playing .status-message {
+  color: #2980b9;
+}
+
+.game-status.winner .status-message {
+  color: #27ae60;
+  animation: celebration 2s ease-in-out;
+}
+
+.game-status.draw .status-message {
+  color: #d68910;
+}
+
+.game-over-info {
+  margin-top: 15px;
+  color: #7f8c8d;
+}
+
+.game-over-info p {
+  margin: 5px 0;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  color: #7f8c8d;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ecf0f1;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes celebration {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.05); }
+  75% { transform: scale(1.1); }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .game-status {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .status-message {
+    font-size: 1.2rem;
+  }
+}

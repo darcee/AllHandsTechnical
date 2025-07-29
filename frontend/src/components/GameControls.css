@@ -1,0 +1,81 @@
+/**
+ * Styles for game control buttons
+ */
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.control-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.control-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control-button:active {
+  transform: translateY(0);
+}
+
+.new-game {
+  background-color: #27ae60;
+  color: white;
+}
+
+.new-game:hover {
+  background-color: #2ecc71;
+}
+
+.reset-game {
+  background-color: #f39c12;
+  color: white;
+}
+
+.reset-game:hover {
+  background-color: #e67e22;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.game-id {
+  font-family: monospace;
+  background-color: #ecf0f1;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.game-status {
+  font-weight: bold;
+  color: #e74c3c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .control-button {
+    min-width: 100px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
