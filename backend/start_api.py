@@ -20,10 +20,11 @@ def main():
     port = int(os.getenv("PORT", "8000"))
     reload = os.getenv("RELOAD", "true").lower() == "true"
     log_level = os.getenv("LOG_LEVEL", "info")
-    
-    print(f"📡 Server will start on: http://{host}:{port}")
-    print(f"📚 API Documentation: http://{host}:{port}/docs")
-    print(f"📖 ReDoc Documentation: http://{host}:{port}/redoc")
+
+    print(f"📡 Server is listening on: http://localhost:{port}")
+    print(f"📡 Server will start on: http://localhost:{port}")
+    print(f"📚 API Documentation: http://localhost:{port}/docs")
+    print(f"📖 ReDoc Documentation: http://localhost:{port}/redoc")
     print(f"🔄 Auto-reload: {reload}")
     print("=" * 50)
     
