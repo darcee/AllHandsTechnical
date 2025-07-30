@@ -25,7 +25,17 @@ export const TicTacToe: React.FC = () => {
       await createGame({ player1_name: player1Name, player2_name: player2Name });
       setShowNameForm(false);
     } else {
-      setShowNameForm(true);
+      // If there's an active game, start a new game with the same player names
+      // If no active game, show the name form
+      if (game) {
+        // Use the current game's player names for the new game
+        await createGame({ 
+          player1_name: game.player1_name, 
+          player2_name: game.player2_name 
+        });
+      } else {
+        setShowNameForm(true);
+      }
     }
   };
 
